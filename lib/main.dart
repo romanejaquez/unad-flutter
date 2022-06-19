@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:unad_app/helpers/utils.dart';
+import 'package:unad_app/services/proxyservice.dart';
 
 void main() {
   runApp(
@@ -14,7 +16,7 @@ void main() {
        ],
        child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: UNADLogin()// UNADApp()
+        home:  UNADApp()
       )  
      )
   );
@@ -145,6 +147,7 @@ class _UNADLoginState extends State<UNADLogin> {
           children: [
             const SizedBox(height: 50),
             Image.asset('assets/imgs/unadlogo.png', width: 80, height: 80),
+            SvgPicture.asset('assets/imgs/forest.svg', width: 80, height: 80),
             const SizedBox(height: 10),
             Text('Bienvenidos a', textAlign: TextAlign.center, style: TextStyle(fontSize: 25, color: Utils.mainColor)),
             Text('UNAD', textAlign: TextAlign.center, style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Utils.mainColor)),
@@ -198,13 +201,16 @@ class _UNADLoginState extends State<UNADLogin> {
               label: 'Entrar',
               color: Utils.mainColor,
               isEnabled: enableLogin,
-              onTap: () {
+              onTap: () async {
                 if (formKey.currentState!.validate()) {
 
-                  // print values
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => UNADHome())
-                  );
+                  var posts = await ProxyService.sendPost();
+                  
+                  if (posts.length > 0) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => UNADHome())
+                    );
+                  }
                 }
               },
             ),
