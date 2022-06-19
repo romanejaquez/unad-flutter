@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unad_app/main.dart';
+import 'package:unad_app/models/asignatura.dart';
 
 class Utils {
   static const Color mainColor = Color(0xFF265A4C);
