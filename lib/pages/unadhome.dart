@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unad_app/helpers/utils.dart';
+import 'package:unad_app/pages/unadasignaturadetalles.dart';
+import 'package:unad_app/pages/unadperfil.dart';
 import 'package:unad_app/widgets/listadeasignaturas.dart';
 import 'package:unad_app/widgets/unadbutton.dart';
 
@@ -29,14 +31,18 @@ class UNADHome extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Hola,', style: TextStyle(color: Utils.mainColor, fontSize: 20)),
-            Text('Roman Jaquez', style: TextStyle(color: Utils.mainColor, fontWeight: FontWeight.bold, fontSize: 25)),
+            const Text('Hola,', style: TextStyle(color: Utils.mainColor, fontSize: 20)),
+            const Text('Roman Jaquez', style: TextStyle(color: Utils.mainColor, fontWeight: FontWeight.bold, fontSize: 25)),
             const SizedBox(height: 10),
             UNADButton(
               icon: Icons.account_circle,
-              label: 'Ver Mi Perfil', color: Utils.secondaryColor, onTap: () {
-
-            }),
+              label: 'Ver Mi Perfil', color: Utils.secondaryColor,
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const UNADPerfil())
+                );
+              }
+            ),
             const SizedBox(height: 20),
             ColoredBox(
               color: Utils.mainColor.withOpacity(0.1),
@@ -51,7 +57,13 @@ class UNADHome extends StatelessWidget {
                 )
               ),
             ),
-            const ListaDeAsignaturas()
+            ListaDeAsignaturas(
+              onItemTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => UNADAsignaturaDetalles())
+                );
+              }
+            )
           ]
         )
       )

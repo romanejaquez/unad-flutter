@@ -92,13 +92,9 @@ class _UNADLoginState extends State<UNADLogin> {
               onTap: () async {
                 if (formKey.currentState!.validate()) {
 
-                  var posts = await ProxyService.sendPost();
-                  
-                  if (posts.length > 0) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => UNADHome())
-                    );
-                  }
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => UNADHome())
+                  );
                 }
               },
             ),

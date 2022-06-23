@@ -11,7 +11,7 @@ class Utils {
       Asignatura(
           id: '1',
           nombre: "Matematica Basica",
-          descripcion: "Matematica Basica",
+          descripcion: "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione.",
           clave: 'MAT-1111',
           prerequisito: 'Bachiller',
           anadida: false
@@ -19,7 +19,7 @@ class Utils {
       Asignatura(
           id: '2',
           nombre: "Matematica Basica",
-          descripcion: "Matematica Basica",
+          descripcion: "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione.",
           clave: 'MAT-1111',
           prerequisito: 'Bachiller',
           anadida: false
@@ -27,7 +27,7 @@ class Utils {
       Asignatura(
           id: '3',
           nombre: "Comunicacion Oral",
-          descripcion: "Comunicacion Oral",
+          descripcion: "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione.",
           clave: 'LESP-1111',
           prerequisito: 'Bachiller',
           anadida: false
@@ -35,7 +35,7 @@ class Utils {
       Asignatura(
           id: '4',
           nombre: "Introduccion a la Ingenieria y Computacion",
-          descripcion: "Matematica Basica",
+          descripcion: "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione.",
           clave: 'COMP-2111',
           prerequisito: 'Bachiller',
           anadida: false
