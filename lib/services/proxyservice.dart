@@ -7,6 +7,7 @@ import 'dart:convert' as convert;
 
 import 'package:unad_app/models/post.dart';
 
+// EJEMPLO DE COMO HACER LLAMADAS REST A UN API EXTERNO
 class ProxyService {
 
   static Future<List<CommentModel>> getPosts() async {
